@@ -1,7 +1,7 @@
 // Import Slidev's UnoCSS config to reuse shortcuts
 import slidevConfig from '@slidev/client/uno.config'
 import transformerDirectives from '@unocss/transformer-directives'
-import { defineConfig, presetIcons, presetTypography, presetUno } from 'unocss'
+import { defineConfig, presetIcons, presetTypography, presetUno, transformerVariantGroup } from 'unocss'
 
 export default defineConfig({
   presets: [
@@ -14,10 +14,19 @@ export default defineConfig({
   ],
   transformers: [
     transformerDirectives(),
+    transformerVariantGroup(),
   ],
   shortcuts: {
-    // Extend Slidev's shortcuts
-    ...slidevConfig.shortcuts,
+    // Core Slidev shortcuts for slide content styling
+    'bg-main': 'bg-white dark:bg-[#121212]',
+    'bg-active': 'bg-gray-400/10',
+    'border-main': 'border-gray/20',
+    'text-main': 'text-[#181818] dark:text-[#ddd]',
+    'text-primary': 'color-$slidev-theme-primary',
+    'bg-primary': 'bg-$slidev-theme-primary',
+    'border-primary': 'border-$slidev-theme-primary',
+    // Extend with any additional Slidev shortcuts
+    ...(slidevConfig.shortcuts || {}),
     // Cloud-specific UI shortcuts
     'btn': 'px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed',
     'btn-primary': 'px-4 py-2 rounded-lg bg-blue-500 text-white hover:bg-blue-600 transition cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed',

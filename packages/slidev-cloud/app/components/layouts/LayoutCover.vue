@@ -1,5 +1,5 @@
 <template>
-  <div class="slidev-layout cover h-full flex flex-col justify-center items-center text-center p-10">
+  <div class="slidev-layout cover flex flex-col justify-center items-center text-center">
     <slot />
   </div>
 </template>

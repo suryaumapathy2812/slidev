@@ -5,7 +5,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="slidev-layout two-cols w-full h-full grid grid-cols-2 p-10">
+  <div class="slidev-layout two-cols w-full grid grid-cols-2">
     <div class="col-left pr-4" :class="$props.class">
       <slot />
     </div>

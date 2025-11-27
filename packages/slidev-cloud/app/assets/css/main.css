@@ -7,17 +7,210 @@
 }
 
 .slidev-slide-content {
-  @apply absolute left-1/2 top-1/2 overflow-hidden bg-main;
+  @apply absolute left-1/2 top-1/2 overflow-hidden bg-main text-main;
   transform-origin: center center;
+}
+
+/* === Slidev Layout Base Styling === */
+.slidev-layout {
+  @apply px-14 py-10 text-[1.1rem] h-full;
+}
+
+/* === Headings === */
+.slidev-layout h1 {
+  @apply text-4xl font-bold mb-4;
+}
+
+.slidev-layout h2 {
+  @apply text-3xl font-semibold mb-3;
+}
+
+.slidev-layout h3 {
+  @apply text-2xl font-semibold mb-2;
+}
+
+.slidev-layout h4 {
+  @apply text-xl font-medium mb-2;
+}
+
+.slidev-layout h5 {
+  @apply text-base font-medium;
+}
+
+.slidev-layout h6 {
+  @apply text-sm pt-1 uppercase tracking-widest font-500 opacity-40;
+}
+
+/* === Paragraphs === */
+.slidev-layout p {
+  @apply my-4 leading-7;
+}
+
+/* === Lists === */
+.slidev-layout ul {
+  list-style: square;
+  @apply pl-6 my-4;
+}
+
+.slidev-layout ol {
+  list-style: decimal;
+  @apply pl-6 my-4;
+}
+
+.slidev-layout li {
+  @apply leading-relaxed my-1;
+}
+
+/* === Links === */
+.slidev-layout a {
+  @apply border-current border-b border-dashed transition-colors;
+  color: var(--slidev-theme-primary, #3ab9d5);
+}
+
+.slidev-layout a:hover {
+  @apply border-solid;
+  color: var(--slidev-theme-primary, #3ab9d5);
+}
+
+/* === Blockquotes === */
+.slidev-layout blockquote {
+  background: var(--slidev-code-background);
+  color: var(--slidev-code-foreground);
+  border-left-color: var(--slidev-theme-primary, #3ab9d5);
+  @apply text-sm px-4 py-2 border-l-4 rounded my-4;
+}
+
+.slidev-layout blockquote > * {
+  @apply my-0;
+}
+
+/* === Tables === */
+.slidev-layout table {
+  @apply w-full my-4;
+}
+
+.slidev-layout tr {
+  @apply border-b border-main;
+}
+
+.slidev-layout th {
+  @apply text-left font-semibold p-2 py-3;
+}
+
+.slidev-layout td {
+  @apply p-2 py-3;
+}
+
+/* === Inline code === */
+.slidev-layout :not(pre) > code {
+  font-size: 0.9em;
+  background: var(--slidev-code-background);
+  border-radius: var(--slidev-code-radius, 4px);
+  @apply font-mono py-0.5 px-1.5;
+}
+
+/* === Code blocks === */
+.slidev-layout pre {
+  @apply select-text my-4;
+}
+
+.slidev-layout code {
+  @apply font-mono;
+}
+
+/* === Strong and emphasis === */
+.slidev-layout strong,
+.slidev-layout b {
+  @apply font-semibold;
+}
+
+.slidev-layout em,
+.slidev-layout i {
+  @apply italic;
+}
+
+/* === Keyboard === */
+.slidev-layout kbd {
+  @apply border border-main border-b-2 rounded;
+  @apply bg-gray-400 bg-opacity-5 py-0.5 px-1 text-xs font-mono;
+}
+
+/* === Horizontal rule === */
+.slidev-layout hr {
+  @apply border-t border-main my-8;
+}
+
+/* === Images === */
+.slidev-layout img {
+  @apply max-w-full h-auto rounded;
 }
 
 /* === Shiki Code Block Styling === */
 .shiki {
-  @apply p-4 text-sm overflow-x-auto rounded-lg;
+  @apply p-4 text-sm overflow-x-auto rounded-lg font-mono;
   background: var(--slidev-code-background) !important;
+}
+
+.shiki code {
+  @apply bg-transparent p-0;
+}
+
+/* Slidev code wrapper styles */
+.slidev-code-wrapper {
+  margin: var(--slidev-code-margin, 4px 0) !important;
+}
+
+.slidev-code {
+  font-family: var(--slidev-code-font-family, ui-monospace, monospace) !important;
+  padding: var(--slidev-code-padding, 8px) !important;
+  font-size: var(--slidev-code-font-size, 12px) !important;
+  line-height: var(--slidev-code-line-height, 18px) !important;
+  border-radius: var(--slidev-code-radius, 4px) !important;
+  background: var(--slidev-code-background);
+  overflow: auto;
+}
+
+/* Dark mode shiki handling */
+html.dark .shiki {
+  color: var(--shiki-dark, inherit);
+}
+
+html.dark .shiki span {
+  color: var(--shiki-dark);
+}
+
+html:not(.dark) .shiki {
+  color: var(--shiki-light, inherit);
+}
+
+html:not(.dark) .shiki span {
+  color: var(--shiki-light);
 }
 
 /* === Dark mode transitions === */
 html {
   @apply transition-colors duration-200;
+}
+
+/* === Cover layout specific styles === */
+.slidev-layout.cover h1 {
+  @apply text-5xl;
+}
+
+.slidev-layout.cover h2 {
+  @apply text-2xl opacity-70 mt-2;
+}
+
+/* === Center layout specific styles === */
+.slidev-layout.center {
+  @apply flex flex-col items-center justify-center text-center;
+}
+
+/* === Section layout specific styles === */
+.slidev-layout.section {
+  @apply flex flex-col items-center justify-center;
+}
+
+.slidev-layout.section h1 {
+  @apply text-5xl;
 }

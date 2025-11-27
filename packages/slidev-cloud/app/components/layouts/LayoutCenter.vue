@@ -1,5 +1,5 @@
 <template>
-  <div class="slidev-layout center h-full grid place-content-center p-10">
+  <div class="slidev-layout center grid place-content-center">
     <div class="my-auto text-center">
       <slot />
     </div>
