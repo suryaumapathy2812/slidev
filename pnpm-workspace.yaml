@@ -12,6 +12,17 @@ linkWorkspacePackages: true
 patchedDependencies:
   '@hedgedoc/markdown-it-plugins@2.1.4': patches/@hedgedoc__markdown-it-plugins@2.1.4.patch
 catalogs:
+  cloud:
+    '@nuxt/eslint': ^1.11.0
+    '@prisma/client': ^5.22.0
+    '@slidev/parser': ^52.9.1
+    '@unocss/nuxt': ^66.5.9
+    '@unocss/transformer-directives': ^66.5.9
+    '@vueuse/nuxt': ^14.1.0
+    better-auth: ^1.4.3
+    nanoid: ^5.1.6
+    nuxt: ^4.2.1
+    prisma: ^5.22.0
   demo:
     '@vue/compiler-sfc': ^3.5.24
   dev:

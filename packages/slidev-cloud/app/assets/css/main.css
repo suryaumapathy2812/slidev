@@ -1,0 +1,23 @@
+/* Slidev Cloud - Custom Styles */
+/* Slidev core styles are imported from @slidev/client/styles/ in nuxt.config.ts */
+
+/* === Slide Container Overrides === */
+.slidev-slide-container {
+  @apply relative w-full h-full overflow-hidden;
+}
+
+.slidev-slide-content {
+  @apply absolute left-1/2 top-1/2 overflow-hidden bg-main;
+  transform-origin: center center;
+}
+
+/* === Shiki Code Block Styling === */
+.shiki {
+  @apply p-4 text-sm overflow-x-auto rounded-lg;
+  background: var(--slidev-code-background) !important;
+}
+
+/* === Dark mode transitions === */
+html {
+  @apply transition-colors duration-200;
+}

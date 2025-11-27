@@ -1,0 +1,34 @@
+{
+  "name": "slidev-cloud",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@iconify-json/carbon": "catalog:icons",
+    "@prisma/client": "catalog:cloud",
+    "@slidev/client": "workspace:*",
+    "@slidev/parser": "catalog:cloud",
+    "@unocss/nuxt": "catalog:cloud",
+    "@vueuse/core": "catalog:frontend",
+    "@vueuse/nuxt": "catalog:cloud",
+    "better-auth": "catalog:cloud",
+    "markdown-it": "catalog:prod",
+    "nanoid": "catalog:cloud",
+    "nuxt": "catalog:cloud",
+    "shiki": "catalog:frontend",
+    "vue": "catalog:frontend",
+    "vue-router": "catalog:frontend"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "catalog:cloud",
+    "@unocss/transformer-directives": "catalog:cloud",
+    "prisma": "catalog:cloud",
+    "typescript": "catalog:dev"
+  }
+}
